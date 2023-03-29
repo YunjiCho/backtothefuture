@@ -21,7 +21,6 @@ let h = 8;
 let m = 20;
 let s = 60;
 let speeds=0;
-let speeds1=0;
 let o = 255;
 let xpos = -273 - 600 / 2;
 let ypos = -83 - (840 / 6) * 5;
@@ -155,11 +154,11 @@ function draw() {
     );
     
     //안개
-    //image(fog, xpos, ypos - speed + 380, width + 410, height + 83);
     image(fog, xpos, ypos - speeds + 450, width + 410, height + 83);
     console.log(ypos);
     ypos = -83 - (height / 6) * 5;
     speeds += 3.8;
+    
     ssi += 1;
     if ((ssi - (ssi % 2)) / 2 == 1) {
       image(
@@ -344,7 +343,7 @@ function draw() {
     sah = -50;
     sam = -90;
     sas = -95;
-    speeds1 = 0;
+    speeds = 0;
   }
   //시작문구
   if (i == 0) {
