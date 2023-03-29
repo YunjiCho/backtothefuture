@@ -87,7 +87,8 @@ function preload() {
 function setup() {
   frameRate(20);
   textFont("Georgia");
-  createCanvas(600, 840);
+  canvas = createCanvas(600, 840);
+  canvas.position(windowWidth/2-600/2,windowHeight/2-840/2);
   background("#000015");
   picArray[0] = p0; // 시작
   picArray[1] = p0;
