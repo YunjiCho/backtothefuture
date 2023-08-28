@@ -388,7 +388,7 @@ function draw() {
   fill(0);
   circle(0, 0, 20);
 }
-function keyPressed() {
+function mousePressed() {
   // if (key == 'ENTER') {
     if (ah > 0 && ah < 75) {
       i = 1;
