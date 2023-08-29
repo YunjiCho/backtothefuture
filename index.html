@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin: 0;
-    }
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
 
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
+      main {
+        display: flex;
+      }
 
-    #text-content {
-      width: 100%;
-      padding: 0;
-      text-align: center;
-    }
+      #text-content {
+        width: 40%;
+        padding: 0;
+        text-align: left;
+        /* margin-left: 10px; */
+      }
 
-    #sketch-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
+      canvas {
+        margin-top: 20px;
+        margin-left: auto; /* 오른쪽으로 붙이기 */
+        width: 80vw; /* 화면 너비의 80%로 설정 */
+        max-width: 600px; /* 최대 너비를 600px로 제한 */
+        height: auto; /* 높이는 자동으로 조정됨 */
+      }
 
-    canvas {
-      max-width: 100%;
-      display: block;
-    }
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 24px;
+      }
 
-    h1 {
-      font-size: 24px; /* 원하는 크기로 조정 */
-    }
+      /* 모바일 화면에 대한 스타일 */
+      @media (max-width: 760px) {
+        #text-content {
+          order: 2;
+          margin-bottom: 0;
+        }
 
-    p {
-      font-size: 18px; /* 원하는 크기로 조정 */
-    }
+        canvas {
+          width: 100%; /* 모바일 화면에서 가득 차게 설정 */
+          max-width: none; /* 최대 너비 제한 해제 */
+          order: 1;
+          margin-left: 0; /* 모바일 화면에서는 왼쪽으로 붙이도록 설정 */
+        }
+      }
 
-    /* 다른 스타일 설정을 추가할 수 있습니다. */
-  </style>
-</head>
-<body>
-  <main>
-    <div id="text-content">
-      <h1>Interactive Poster : Back to the Future</h1>
-      <p>
-        '벼락 맞은 시계탑'의 메타포를 이용하여 미래로 돌아가고자 하는 영화의
-        줄거리를 게임의 형식을 차용하여 표현했다.
-      </p>
-    </div>
-    <div id="sketch-container">
-      <script src="sketch.js"></script>
-    </div>
-  </main>
-</body>
+      /* 다른 스타일 설정을 추가할 수 있습니다. */
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="sketch-container">
+        <script src="sketch.js"></script>
+      </div>
+      <div id="text-content">
+        <h1>Interactive Poster : Back to the Future</h1>
+        <p>
+          '벼락 맞은 시계탑'의 메타포를 이용하여 미래로 돌아가고자 하는 영화의
+          줄거리를 게임의 형식을 차용하여 표현했다.
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
