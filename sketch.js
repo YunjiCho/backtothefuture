@@ -20,7 +20,7 @@ let ssi = 0;
 let h = 8;
 let m = 20;
 let s = 60;
-let speeds=0;
+let speeds = 0;
 let o = 255;
 let xpos = -273 - 600 / 2;
 let ypos = -83 - (840 / 6) * 5;
@@ -87,7 +87,6 @@ function setup() {
   frameRate(20);
   textFont("Georgia");
   canvas = createCanvas(600, 840);
-  canvas.position(windowWidth/2-600/2,windowHeight/2-840/2);
   background("#000015");
   picArray[0] = p0; // 시작
   picArray[1] = p0;
@@ -152,13 +151,13 @@ function draw() {
       width + -133,
       height + -624
     );
-    
+
     //안개
     image(fog, xpos, ypos - speeds + 450, width + 410, height + 83);
     console.log(ypos);
     ypos = -83 - (height / 6) * 5;
     speeds += 3.8;
-    
+
     ssi += 1;
     if ((ssi - (ssi % 2)) / 2 == 1) {
       image(
@@ -390,30 +389,30 @@ function draw() {
 }
 function mousePressed() {
   // if (key == 'ENTER') {
-    if (ah > 0 && ah < 75) {
-      i = 1;
-      si = 1;
-    } else if (ah > 105 && ah < 150) {
-      i = 2;
-      si = 2;
-    } else if (ah > 151 && ah < 225) {
-      i = 3;
-      si = 3;
-    } else if (ah > 226 && ah < 300) {
-      i = 4;
-      si = 4;
-    } else if (ah > 301 && ah < 360 && i != 5) {
-      ah = 305;
-      am = 27;
-      h = 0;
-      m = 0;
-      s = 0;
-      i = 5;
-      si = 5;
-      image(bglight, xpos, ypos - speeds1 + 400, width + 410, height + 83);
-      fill(0, 0, 0, 0);
-    }
-    //print(i);
+  if (ah > 0 && ah < 75) {
+    i = 1;
+    si = 1;
+  } else if (ah > 105 && ah < 150) {
+    i = 2;
+    si = 2;
+  } else if (ah > 151 && ah < 225) {
+    i = 3;
+    si = 3;
+  } else if (ah > 226 && ah < 300) {
+    i = 4;
+    si = 4;
+  } else if (ah > 301 && ah < 360 && i != 5) {
+    ah = 305;
+    am = 27;
+    h = 0;
+    m = 0;
+    s = 0;
+    i = 5;
+    si = 5;
+    image(bglight, xpos, ypos - speeds1 + 400, width + 410, height + 83);
+    fill(0, 0, 0, 0);
+  }
+  //print(i);
   // }
 }
 class Typo {
